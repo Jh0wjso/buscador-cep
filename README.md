@@ -6,7 +6,7 @@
 
 ## 📸
 
-![image](https://raw.githubusercontent.com/Jh0wjso/AG-Sistemas/refs/heads/main/public/print.png?token=GHSAT0AAAAAACZ65XJULUYDJTZXM44O6C7AZ6GCDHA)
+![image](https://raw.githubusercontent.com/Jh0wjso/buscador-cep/refs/heads/main/public/print.png)
 
 ---
 
