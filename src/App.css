@@ -1,44 +1,65 @@
 @import "tailwindcss";
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.App {
+  @apply flex flex-row min-h-screen;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Sidebar */
+.sidebar {
+  @apply w-[25vw] bg-[#02040F] text-[#f0f0f0] p-4 pt-[15vh];
+  font-family: "Roboto", sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.address-list {
+  @apply mt-4 p-2 rounded-md text-white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.search-button{
+  @apply flex justify-center items-center gap-5 h-[6vh];
 }
 
-.card {
-  padding: 2em;
+.cep-button {
+  @apply w-[100%] text-left p-4 bg-transparent text-white rounded-md mt-2 hover:bg-[#272e4b];
+  @apply flex justify-between items-center text-2xl bg-[#202020];
 }
 
-.read-the-docs {
-  color: #888;
+.empty-message {
+  @apply text-gray-400 italic;
+}
+
+/* Área de conteúdo */
+.content {
+  @apply w-[75vw] flex flex-col items-center justify-center mt-10;
+}
+
+.input-container {
+  @apply border-2 rounded-md p-4 flex w-[30vw] justify-between items-center;
+}
+
+.modalContent{
+  @apply bg-white p-4 rounded-md mt-4 w-[30vw];
+}
+
+.modalContent p {
+  @apply flex justify-between items-center mt-4 text-2xl;
+}
+
+.inputCEP {
+  @apply p-2 border rounded-md h-[6vh] w-[20vw];
+}
+
+.address-card {
+  @apply bg-gray-200 p-4 rounded-md mt-4 w-[30vw] shadow-md;
+}
+
+button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-md mt-2 hover:bg-blue-700;
+}
+
+.delete-button {
+  @apply ml-2 text-white hover:text-red-800 bg-transparent hover:bg-transparent;
+}
+
+.modal-delete {
+  @apply bg-red-500 text-white px-4 py-2 rounded-md mt-2 hover:bg-red-700;
 }
