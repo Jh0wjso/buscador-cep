@@ -213,9 +213,9 @@ function App() {
             backgroundColor: "#fff",
             borderRadius: "8px",
             padding: "20px",
-            maxWidth: "60vw",
+            maxWidth: "90vw",
             width: "100%",
-            maxHeight: "50vh",
+            maxHeight: "60vh",
             height: "100%",
           },
         }}
@@ -247,7 +247,7 @@ function App() {
                 {selectedAddress.uf}
               </p>
             </div>
-            <button className="modal-close" onClick={closeModal}>
+            <button className="" onClick={closeModal}>
               Fechar
             </button>
           </div>
