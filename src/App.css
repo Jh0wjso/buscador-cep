@@ -2,12 +2,22 @@
 
 .App {
   @apply flex flex-row min-h-screen;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 /* Sidebar */
 .sidebar {
   @apply w-[25vw] bg-[#02040F] text-[#f0f0f0] p-4 pt-[15vh];
   font-family: "Roboto", sans-serif;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .address-list {
@@ -34,10 +44,15 @@
 
 .input-container {
   @apply border-2 rounded-md p-4 flex w-[30vw] justify-between items-center;
+
+  @media (max-width: 768px) {
+    width: 75vw;
+    @apply border-0;
+  }
 }
 
 .modalContent{
-  @apply bg-white p-4 rounded-md mt-4 w-[30vw];
+  @apply bg-white p-4 mt-4 w-[30vw] border-b-2;
 }
 
 .modalContent p {
@@ -45,7 +60,11 @@
 }
 
 .inputCEP {
-  @apply p-2 border rounded-md h-[6vh] w-[20vw];
+  @apply p-2 border-b-2 h-[6vh] w-[20vw];
+
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 }
 
 .address-card {
@@ -62,4 +81,19 @@ button {
 
 .modal-delete {
   @apply bg-red-500 text-white px-4 py-2 rounded-md mt-2 hover:bg-red-700;
+}
+
+.mobileAddress{
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.modal-close{
+  width: 20%;
+  height: 5vh;
+  font-size: 1.5em;
+  font-weight: bold;
 }

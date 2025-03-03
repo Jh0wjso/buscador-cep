@@ -143,7 +143,7 @@ function App() {
             onClick={() => getAddressByCEP(cep)}
             className="search-button"
           >
-            Buscar <FaSearch color="#fff" size={20} />
+            <FaSearch color="#fff" size={20} />
           </button>
         </div>
 
@@ -166,6 +166,33 @@ function App() {
             </button>
           </div>
         )}
+
+        <section className="mobileAddress">
+          <ul className="address-list">
+            {savedAddresses.length === 0 ? (
+              <p className="empty-message">Nenhum endereço salvo ainda</p>
+            ) : (
+              savedAddresses.map((addr, index) => (
+                <li key={index}>
+                  <button
+                    className="cep-button"
+                    onClick={() => openModal(addr)}
+                  >
+                    <p className="flex items-center gap-4">
+                      <FaLocationCrosshairs /> {addr.cep}
+                    </p>
+                    <button
+                      className="delete-button"
+                      onClick={() => openDeleteModal(addr)}
+                    >
+                      <FaRegTrashAlt size={20} />
+                    </button>
+                  </button>
+                </li>
+              ))
+            )}
+          </ul>
+        </section>
       </section>
 
       <Modal
@@ -255,7 +282,7 @@ function App() {
           <p>
             Você realmente deseja excluir o endereço {addressToDelete?.cep}?
           </p>
-          <button className="modal-close" onClick={closeDeleteModal}>
+          <button className="" onClick={closeDeleteModal}>
             Cancelar
           </button>
           <button className="modal-delete" onClick={deleteAddress}>
